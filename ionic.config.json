@@ -1,0 +1,7 @@
+{
+  "name": "faucetList",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

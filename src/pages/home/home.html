@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-header>
+    <ion-navbar no-border-bottom color="dark">
+      <ion-title>
+        Segments
+      </ion-title>
+    </ion-navbar>
+  
+    <ion-toolbar no-border-top color="dark">
+      <ion-segment [(ngModel)]="cryptomoney">
+        <ion-segment-button value="bitcoin">
+          Bitcoin
+        </ion-segment-button>
+        <ion-segment-button value="litecoin">
+          LiteCoin/ethernem
+        </ion-segment-button>
+        <ion-segment-button value="doge">
+          Doge
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div [ngSwitch]="cryptomoney">
+      <ion-list *ngSwitchCase="'bitcoin'">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="https://coinpot.co/img/logo.png">
+          </ion-thumbnail>
+          <h2>CoinPot</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-puppy-2.jpg">
+          </ion-thumbnail>
+          <h2>Oscar</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-puppy-4.jpg">
+          </ion-thumbnail>
+          <h2>Zoey</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-puppy-3.jpg">
+          </ion-thumbnail>
+          <h2>Otto</h2>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list *ngSwitchCase="'litecoin'">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-kitten-1.jpg">
+          </ion-thumbnail>
+          <h2>Luna</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-kitten-3.jpg">
+          </ion-thumbnail>
+          <h2>Milo</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-kitten-4.jpg">
+          </ion-thumbnail>
+          <h2>Bandit</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-kitten-2.jpg">
+          </ion-thumbnail>
+          <h2>Nala</h2>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list *ngSwitchCase="'doge'">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-1/p50x50/12115433_489860621139278_1817677954129076850_n.png?_nc_cat=1&oh=0a971ed0c35ff715b69b2eb7d08550f1&oe=5BFF72E2">
+          </ion-thumbnail>
+          <h2>MoonDoge</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-duckling-2.jpg">
+          </ion-thumbnail>
+          <h2>Huey</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-duckling-3.jpg">
+          </ion-thumbnail>
+          <h2>Dewey</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/thumbnail-duckling-4.jpg">
+          </ion-thumbnail>
+          <h2>Louie</h2>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-content>
