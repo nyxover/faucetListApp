@@ -11,11 +11,23 @@
 
   <ion-header>
     <ion-navbar no-border-bottom color="dark">
-      <ion-title>
-        Segments
-      </ion-title>
+ 
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list>
+        <ion-item *ngFor="let item of items">
+          {{ item }}
+        </ion-item>
+      </ion-list>
     </ion-navbar>
   
+
+
+
+
+
+
+
+
     <ion-toolbar no-border-top color="dark">
       <ion-segment [(ngModel)]="cryptomoney">
         <ion-segment-button value="bitcoin">
@@ -35,8 +47,12 @@
     <div [ngSwitch]="cryptomoney">
       <ion-list *ngSwitchCase="'bitcoin'">
         <ion-item>
-          <ion-thumbnail item-start>
+          <ion-thumbnail item-start (tap)="tapEvent($event)">
             <img src="https://coinpot.co/img/logo.png">
+            <br>
+            <button ion-button outline ng-href="https://coinpot.co">allez sur le faucet</button>
+
+            Tapped: {{tap}} times
           </ion-thumbnail>
           <h2>CoinPot</h2>
         </ion-item>
